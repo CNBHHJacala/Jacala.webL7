@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <body style="background-image: url(https://images.squarespace-cdn.com/content/v1/58a85d139f74561f4db24e74/1580233127845-FJXGAOJ60XSCJ6JCEOMP/insert.jpg); background-position: center; background-repeat: no-repeat;background-size: cover;background-attachment: fixed;"></body>
+    <title>Mas Informacion</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+    
+ <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i,700i" rel="stylesheet">
+ 
+ 
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.4.4/jquery.min.js"></script>
+		<script src="booklet/jquery.easing.1.3.js" type="text/javascript"></script>
+		<script src="booklet/jquery.booklet.1.1.0.min.js" type="text/javascript"></script>
+
+		<link href="booklet/jquery.booklet.1.1.0.css" type="text/css" rel="stylesheet" media="screen" />
+
+        <style>
+         
+            *{
+  margin:0;
+  padding:0;
+}
+
+
+
+.booklet           {
+  width:900px;
+  height:607px;
+  position:relative;
+  margin:0 auto 10px;
+  -moz-box-shadow:0px 0px 1px #fff;
+  -webkit-box-shadow:0px 0px 1px #fff;
+  box-shadow:0px 0px 1px #fff;
+  -moz-border-radius:10px;
+  -webkit-border-radius:10px;
+  border-radius:10px;
+}
+.booklet .b-wrap-left  {
+  background:#fff url(images/left_bg.jpg) no-repeat top left;
+  -webkit-border-top-left-radius: 10px;
+  -webkit-border-bottom-left-radius: 10px;
+  -moz-border-radius-topleft:10px;
+  -moz-border-radius-bottomleft: 10px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+.booklet .b-wrap-right {
+  background:#efefef url(images/right_bg.jpg) no-repeat top left;
+  -webkit-border-top-right-radius: 10px;
+  -webkit-border-bottom-right-radius: 10px;
+  -moz-border-radius-topright: 10px;
+  -moz-border-radius-bottomright: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.booklet .b-counter {
+  bottom:10px;
+  position:absolute;
+  display:block;
+  width:90%;
+  height:20px;
+  border-top:1px solid #ddd;
+  color:#222;
+  text-align:center;
+  font-size:12px;
+  padding:5px 0 0;
+  background:transparent;
+  -moz-box-shadow:0px -1px 1px #fff;
+  -webkit-box-shadow:0px -1px 1px #fff;
+  box-shadow:0px -1px 1px #fff;
+  opacity:0.8;
+}
+.book_wrapper{
+  margin:0 auto;
+  padding-top:50px;
+  width:905px;
+  height:540px;
+  position:relative;
+  background:transparent url(images/bg.png) no-repeat 9px 27px;
+}
+.book_wrapper h1{
+  color:orange;
+  margin:5px 5px 5px 15px;
+  font-size:24px;
+  background:transparent url(images/h1.png) no-repeat bottom left;
+  padding-bottom:7px;
+  text-transform: uppercase;
+  font-weight: normal;
+}
+.book_wrapper p{
+  font-size:15px;
+  margin:5px 5px 5px 15px;
+}
+.book_wrapper a.article,
+.book_wrapper a.demo{
+  background:transparent url(images/circle.png) no-repeat 50% 0px;
+  display:block;
+  width:95px;
+  height:41px;
+  text-decoration:none;
+  outline:none;
+  font-size:16px;
+  color:#555;
+  float:left;
+  line-height:41px;
+  padding-left:47px;
+}
+.book_wrapper a.demo{
+  margin-left:50px;
+}
+.book_wrapper a.article:hover,
+.book_wrapper a.demo:hover{
+  background-position:50% -41px;
+  color:#13386a;
+}
+.book_wrapper img{
+  margin:10px 0px 5px 35px;
+  width:300px;
+  padding:4px;
+  border:1px solid #ddd;
+  -moz-box-shadow:1px 1px 1px #fff;
+  -webkit-box-shadow:1px 1px 1px #fff;
+  box-shadow:1px 1px 1px #fff;
+}
+.booklet .b-wrap-right img{
+  border:1px solid #E6E3C2;
+}
+a#next_page_button,
+a#prev_page_button{
+  display:none;
+  position:absolute;
+  width:41px;
+  height:40px;
+  cursor:pointer;
+  margin-top:-20px;
+  top:50%;
+  background:transparent url(images/buttons.png) no-repeat 0px -40px;
+}
+a#prev_page_button{
+  left:-30px;
+}
+a#next_page_button{
+  right:-30px;
+  background-position:-41px -40px;
+}
+a#next_page_button:hover{
+  background-position:-41px 0px;
+}
+a#prev_page_button:hover{
+  background-position:0px 0px;
+}
+
+  
+  
+       </style>
+</head>
+<body>
+    <div class="navbar">
+        <img src="img/logo_jacala.png" class="logo" width="150">
+        <a href="index.html" class="">Instrucciones</a>
+        <a href="formulario.html">registro</a>
+       <a href="pago.html"> formas de pago </a>
+       <a href="contacto.html">Contacto</a>
+       <a href="noticias.html" class="active">Mas Informacion</a>
+    </div>
+    <div class="book_wrapper">
+        <a id="next_page_button"></a>
+        <a id="prev_page_button"></a>
+         
+        <div id="mybook" style="display:none;">
+            <div class="b-load">
+                <div>
+                    <img src="images/1.jpg" alt=""/>
+                    
+                </div>
+                <div>
+                    <img src="images/2.jpg" alt="" />
+                    
+                </div>
+                <div>
+                    <img src="images/3.jpg" alt="" />
+                </div>
+                    
+                <div>
+                    <img src="images/4.jpg" alt="" />
+                    
+                </div>
+                <div>
+                    <img src="images/5.jpg" alt="" />
+                </div>
+                    
+                <div>
+                    <img src="images/6.jpg" alt="" />
+                    
+                </div>
+                <div>
+                    <img src="images/7.jpg" alt="" />
+                    
+                </div>
+                <div>
+                  <img src="images/9.png" alt="" />
+                  <h2>CATEGORIAS Y DOCUMENTOS A ENTREGAR</h2>
+              </div>
+              <div>
+                <img src="images/10.jpg" alt="" />
+                <h2>EL PARAISO DEL HUAPANGO</h2>
+            </div>
+                <div>
+                    <img src="images/8.jpg" alt="" />
+                    <h2>TE ESPERA</h2>
+						
+						
+                    
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    
+       
+                    <script type="text/javascript">
+                        $(function() {
+                            var $mybook 		= $('#mybook');
+                            var $bttn_next		= $('#next_page_button');
+                            var $bttn_prev		= $('#prev_page_button');
+                            var $loading		= $('#loading');
+                            var $mybook_images	= $mybook.find('img');
+                            var cnt_images		= $mybook_images.length;
+                            var loaded			= 0;
+                             
+                            $mybook_images.each(function(){
+                                var $img 	= $(this);
+                                var source	= $img.attr('src');
+                                $('<img/>').load(function(){
+                                    ++loaded;
+                                    if(loaded == cnt_images){
+                                        $loading.hide();
+                                        $bttn_next.show();
+                                        $bttn_prev.show();
+                                        $mybook.show().booklet({
+                                            name:               null,                            //  
+                                            width:              800,                             //  
+                                            height:             500,                             //   
+                                            speed:              600,                             //  
+                                            direction:          'LTR',                           //  
+                                                                       //  
+                                            next:               $bttn_next,          			//  
+                                            prev:               $bttn_prev,          			//  
+                                                                   
+                                        });
+                                        Cufon.refresh();
+                                    }
+                                }).attr('src',source);
+                            });
+                            
+                        });
+                    </script>
+                    <!-- Chatbot container -->
+<div id="chatbot" class="chatbot-container">
+  <div class="chatbot-header">BIENVENIDO A NUESTRO CHAT </div>
+  <div class="chatbot-content">
+      <p>Selecciona una pregunta para obtener una respuesta:</p>
+      <select id="questionSelect" class="select-question" onchange="provideAnswer()">
+          <option value="">-- Selecciona una pregunta --</option>
+          <option value="R1">¿CUAL ES EL COSTO DE INSCRIPCION?</option>
+          <option value="R2">¿CUALES SON LAS CATEGORÍAS?</option>
+          <option value="R3">¿CUALES SON LOS DOCUEMENTOS A ENTREGAR?</option>
+          <option value="R4">¿DONDE SE LLEVARA ACABO LA RECEPCION DE DOCUMENTOS?</option>
+          <option value="R5">¿CUALES SON LAS FECHAS DE ESTE EVENTO?</option>
+      </select>
+      <div id="response" class="bot-response"></div>
+  </div>
+</div>
+
+<!-- Botón para abrir el chatbot con imagen de huapanguero -->
+<button onclick="toggleChatbot()" class="open-chatbot-button" onmouseover="showTooltip()" onmouseout="hideTooltip()">
+  <img src="images/chat1.png" alt="Huapanguero" style="width: 100%; height: 100%;">
+</button>
+
+<!-- Tooltip que aparece al pasar el cursor -->
+<div id="tooltip" class="tooltip">¡ BIENVENIDO A NUESTRO CHAT NUESTROS HUAPANGUEROS CON GUSTO TE AYUDARAN A RESOLVER TUS DUDAS !</div>
+
+<script>
+  // Preguntas y respuestas predefinidas
+  const respuestas = {
+      R1: "El costo de inscripción por pareja es de $250.00.",
+      R2: "Son las siguientes categorías: Pequeños Huapangueros (de 3 a 5 años,11 meses), Infantil (de 6 a 12 años,11 meses), Juvenil (de 13 a 17 años,11 meses), Adulto (hombres de 18 a 49 años,11 meses, mujeres de 18 a 44 años,11 meses), Grandes Huapangueros (hombres de 50 años en adelante y mujeres de 45 años en adelante).",
+      R3: "Para Pequeños Huapangueros, Infantil y Juvenil: acta de nacimiento, CURP, 2 fotografías tamaño infantil y copia de la INE del tutor responsable. Para Adultos y Grandes Huapangueros: identificación oficial con fotografía y 2 fotografías tamaño infantil.",
+      R4: "Se estarán recibiendo los documentos en el Reloj Municipal de JACALA.",
+      R5: "Las fechas de este magnífico evento son los días 29 y 30 de noviembre de 2024."
+        
+  };
+
+  // Mostrar y ocultar el chatbot
+  function toggleChatbot() {
+      const chatbot = document.getElementById("chatbot");
+      chatbot.style.display = chatbot.style.display === "none" || chatbot.style.display === "" ? "flex" : "none";
+  }
+
+  // Proporcionar respuesta y leer en voz alta
+  function provideAnswer() {
+      const question = document.getElementById("questionSelect").value;
+      const responseDiv = document.getElementById("response");
+
+      if (question) {
+          const answer = respuestas[question];
+          responseDiv.innerText = answer;
+          speakText(answer); // Leer en voz alta la respuesta
+      } else {
+          responseDiv.innerText = "";
+      }
+  }
+
+  // Función para leer texto en voz alta con voz femenina en español de México, si está disponible
+  function speakText(text) {
+      const utterance = new SpeechSynthesisUtterance(text);
+      const voices = window.speechSynthesis.getVoices();
+
+      // Seleccionar una voz femenina en español de México o España
+      const mexicanFemaleVoice = voices.find(voice => 
+          voice.lang === "es-MX" && voice.name.toLowerCase().includes("female")
+      );
+
+      const spanishFemaleVoice = voices.find(voice => 
+          voice.lang === "es-ES" && voice.name.toLowerCase().includes("female")
+      );
+
+      // Asignar la voz femenina, si se encontró una de las dos
+      utterance.voice = mexicanFemaleVoice || spanishFemaleVoice || voices.find(voice => voice.lang.startsWith("es"));
+      utterance.lang = "es-MX"; // Preferencia por español de México
+      window.speechSynthesis.speak(utterance);
+  }
+
+  // Mostrar el tooltip cuando el cursor pase sobre el botón
+  function showTooltip() {
+      const tooltip = document.getElementById("tooltip");
+      tooltip.style.display = "block";
+  }
+
+  // Ocultar el tooltip cuando el cursor se mueve fuera del botón
+  function hideTooltip() {
+      const tooltip = document.getElementById("tooltip");
+      tooltip.style.display = "none";
+  }
+
+  // Cargar voces antes de usarlas
+  window.speechSynthesis.onvoiceschanged = () => speakText("");
+</script>
+
+             
+             <div class="footer-bottom" style="margin-top: 20px; font-size: 14px; color: #E6E3C2;">
+              <p>&copy; 2024 LinarTech. Todos los derechos reservados.</p>
+          </div>
+</body>
+</html>

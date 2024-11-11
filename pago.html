@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formas de pago</title>
+    <link rel="stylesheet" href="styles.css">
+    
+</head>
+<body>
+
+    <!-- Barra de navegación -->
+    <div class="navbar">
+        <img src="img/logo_jacala.png" class="logo" alt="Logo">
+        <div class="menu-icon" onclick="toggleMenu()">
+            <i class="fas fa-bars"></i> <!-- Icono de menú -->
+        </div>
+        <a href="index.html" class="">Instrucciones</a>
+        <a href="formulario.html">Registro</a>
+        <a href="pago.html" class="active">Formas de Pago</a>
+        <a href="contacto.html">Contacto</a>
+        <a href="noticias.html">Más Información</a>
+    </div>
+
+    <h3 class="tP">Formas de Pago</h3>
+
+    <!-- Tarjeta de crédito -->
+    <div class="credit-card">
+        <div class="chip"></div>
+        <div class="txtn">NO.CUENTA</div>
+        <div class="card-number">4198 2101 7552 6408</div>
+        <div class="txtc">BANCO AZTECA</div>
+        <div class="card-number2">MUNICIPIO DE JACALA</div>
+    
+    
+    </div>
+    <div class="container">
+        <div class="form-container">
+            <h2>Contacta con Nosotros</h2>
+            <form>
+                <input type="text" placeholder="Nombre" required>
+                <input type="email" placeholder="Correo Electrónico" required>
+                <input type="tel" placeholder="Teléfono" required>
+                <textarea placeholder="Mensaje" rows="4"></textarea>
+                <button class="button2" type="submit">Registrar</button>
+            </form>
+        </div>
+        
+        <div class="info-container">
+      
+            <div class="contact-info">
+                <p><strong>Teléfono comite:</strong> +52 771 422 2346</p>
+                <p><strong>Teléfono informatica:</strong> +52 771 172 4374</p>
+                <p><strong>Email:</strong> CNBHHJACALA2024@jacala.gob.mx</p>
+            </div>
+            <div class="socials">
+                <a href="https://www.facebook.com/profile.php?id=61566329706621" target="_blank"><i class="fab fa-facebook-square"></i></a>
+                <a href="https://www.facebook.com/profile.php?id=61565887623124" target="_blank"><i class="fab fa-facebook-square"></i></a>
+            </div>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14898.565822785902!2d-99.19226604999999!3d21.007004799999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d6a8207e1de5fb%3A0x18ef449c269e1fda!2sJacala%2C%20Hgo.!5e0!3m2!1ses!2smx!4v1697950668670!5m2!1ses!2smx" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
+        
+
+    <script>
+        // Función para mostrar/ocultar el menú en dispositivos móviles
+        function toggleMenu() {
+            const navbar = document.querySelector('.navbar');
+            navbar.classList.toggle('active');
+        }
+    </script>
+    <!-- Chatbot container -->
+<div id="chatbot" class="chatbot-container">
+    <div class="chatbot-header">BIENVENIDO A NUESTRO CHAT </div>
+    <div class="chatbot-content">
+        <p>Selecciona una pregunta para obtener una respuesta:</p>
+        <select id="questionSelect" class="select-question" onchange="provideAnswer()">
+            <option value="">-- Selecciona una pregunta --</option>
+            <option value="R1">¿CUAL ES EL COSTO DE INSCRIPCION?</option>
+            <option value="R2">¿CUALES SON LAS CATEGORÍAS?</option>
+            <option value="R3">¿CUALES SON LOS DOCUEMENTOS A ENTREGAR?</option>
+            <option value="R4">¿DONDE SE LLEVARA ACABO LA RECEPCION DE DOCUMENTOS?</option>
+            <option value="R5">¿CUALES SON LAS FECHAS DE ESTE EVENTO?</option>
+        </select>
+        <div id="response" class="bot-response"></div>
+    </div>
+</div>
+
+<!-- Botón para abrir el chatbot con imagen de huapanguero -->
+<button onclick="toggleChatbot()" class="open-chatbot-button" onmouseover="showTooltip()" onmouseout="hideTooltip()">
+    <img src="images/chat1.png" alt="Huapanguero" style="width: 100%; height: 100%;">
+</button>
+
+<!-- Tooltip que aparece al pasar el cursor -->
+<div id="tooltip" class="tooltip">¡ BIENVENIDO A NUESTRO CHAT NUESTROS HUAPANGUEROS CON GUSTO TE AYUDARAN A RESOLVER TUS DUDAS !</div>
+
+<script>
+    // Preguntas y respuestas predefinidas
+    const respuestas = {
+        R1: "El costo de inscripción por pareja es de $250.00.",
+        R2: "Son las siguientes categorías: Pequeños Huapangueros (de 3 a 5 años,11 meses), Infantil (de 6 a 12 años,11 meses), Juvenil (de 13 a 17 años,11 meses), Adulto (hombres de 18 a 49 años,11 meses, mujeres de 18 a 44 años,11 meses), Grandes Huapangueros (hombres de 50 años en adelante y mujeres de 45 años en adelante).",
+        R3: "Para Pequeños Huapangueros, Infantil y Juvenil: acta de nacimiento, CURP, 2 fotografías tamaño infantil y copia de la INE del tutor responsable. Para Adultos y Grandes Huapangueros: identificación oficial con fotografía y 2 fotografías tamaño infantil.",
+        R4: "Se estarán recibiendo los documentos en el Reloj Municipal de JACALA.",
+        R5: "Las fechas de este magnífico evento son los días 29 y 30 de noviembre de 2024."
+          
+    };
+
+    // Mostrar y ocultar el chatbot
+    function toggleChatbot() {
+        const chatbot = document.getElementById("chatbot");
+        chatbot.style.display = chatbot.style.display === "none" || chatbot.style.display === "" ? "flex" : "none";
+    }
+
+    // Proporcionar respuesta y leer en voz alta
+    function provideAnswer() {
+        const question = document.getElementById("questionSelect").value;
+        const responseDiv = document.getElementById("response");
+
+        if (question) {
+            const answer = respuestas[question];
+            responseDiv.innerText = answer;
+            speakText(answer); // Leer en voz alta la respuesta
+        } else {
+            responseDiv.innerText = "";
+        }
+    }
+
+    // Función para leer texto en voz alta con voz femenina en español de México, si está disponible
+    function speakText(text) {
+        const utterance = new SpeechSynthesisUtterance(text);
+        const voices = window.speechSynthesis.getVoices();
+
+        // Seleccionar una voz femenina en español de México o España
+        const mexicanFemaleVoice = voices.find(voice => 
+            voice.lang === "es-MX" && voice.name.toLowerCase().includes("female")
+        );
+
+        const spanishFemaleVoice = voices.find(voice => 
+            voice.lang === "es-ES" && voice.name.toLowerCase().includes("female")
+        );
+
+        // Asignar la voz femenina, si se encontró una de las dos
+        utterance.voice = mexicanFemaleVoice || spanishFemaleVoice || voices.find(voice => voice.lang.startsWith("es"));
+        utterance.lang = "es-MX"; // Preferencia por español de México
+        window.speechSynthesis.speak(utterance);
+    }
+
+    // Mostrar el tooltip cuando el cursor pase sobre el botón
+    function showTooltip() {
+        const tooltip = document.getElementById("tooltip");
+        tooltip.style.display = "block";
+    }
+
+    // Ocultar el tooltip cuando el cursor se mueve fuera del botón
+    function hideTooltip() {
+        const tooltip = document.getElementById("tooltip");
+        tooltip.style.display = "none";
+    }
+
+    // Cargar voces antes de usarlas
+    window.speechSynthesis.onvoiceschanged = () => speakText("");
+</script>
+
+<div class="footer-bottom" style="margin-top: 20px; font-size: 14px; color: #E6E3C2;">
+    <p>&copy; 2024 LinarTech. Todos los derechos reservados.</p>
+</div>
+</body>
+</html>
